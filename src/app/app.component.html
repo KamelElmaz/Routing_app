@@ -1,0 +1,22 @@
+<h1>App Component</h1>
+
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/first">First Component</a>
+    </li>
+    <li>
+      <a routerLink="/second">Second Component</a>
+    </li>
+    <li>
+      <a routerLink="/cantine">Cantinière : Login </a>
+    </li>
+  </ul>
+</nav>
+
+<h2>User List</h2>
+<p *ngFor="let user of users">
+  <a [routerLink]="'/user/' + user.id">{{user.name}}</a>
+</p>
+
+<router-outlet></router-outlet>

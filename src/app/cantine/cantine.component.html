@@ -1,0 +1,16 @@
+<h2> Demo cantinière : LOGIN</h2>
+
+<button (click)="login()" [innerText]="token ? 'Logout' : 'Login'">LOGIN</button>
+
+<div *ngIf="token">
+  <button (click)="getUsers()">GET USERS</button>
+  <ol>
+    <li *ngFor="let user of listUser">
+      {{user.name}} -- {{user.firstname}}
+    </li>
+  </ol>
+</div>
+
+
+<!--<h3>Token envoyé par l'API : </h3>
+<div style="width: auto">{{ token }}</div>-->
